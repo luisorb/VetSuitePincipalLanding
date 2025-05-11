@@ -1,0 +1,77 @@
+---
+import Testimonial from "../components/Testimonial.astro";
+---
+
+<!-- Elegant Testimonials Section -->
+<section class="py-28 px-4 bg-gradient-to-b from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="max-w-3xl mx-auto text-center mb-20">
+      <span
+        class="inline-block mb-4 text-blue-600 font-semibold tracking-wider uppercase text-sm"
+        >Confianza profesional</span
+      >
+      <h2
+        class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight"
+      >
+        Historias de éxito en <span class="text-blue-600"
+          >clínicas veterinarias</span
+        >
+      </h2>
+      <p class="text-xl text-gray-600 md:px-10">
+        Descubre cómo VetSuite está transformando la gestión en prácticas
+        veterinarias como la tuya.
+      </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10">
+      <Testimonial
+        name="Dra. Laura Méndez"
+        position="Dueña, Clínica Animal Care"
+        quote="VetSuite ha revolucionado nuestra eficiencia operativa. Lo que antes nos tomaba horas ahora se resuelve en minutos, permitiéndonos enfocarnos completamente en el bienestar animal."
+        stars={5}
+        image="/images/testimonial-1.jpg"
+        featured
+      />
+      <Testimonial
+        name="Dr. Carlos Ruiz"
+        position="Veterinario jefe, Happy Pets"
+        quote="La integración perfecta entre historiales médicos y gestión de inventario nos ha ahorrado incontables horas. Las alertas predictivas previenen desabastecimientos críticos."
+        stars={5}
+        image="/images/testimonial-2.jpg"
+      />
+    </div>
+
+    <!-- Client logos carousel -->
+    <div class="mt-20 px-10">
+      <div
+        class="flex flex-wrap justify-center gap-12 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500"
+      >
+        <img
+          src="/images/logo-vet1.svg"
+          alt="Paws & Care"
+          class="h-12 object-contain"
+        />
+        <img
+          src="/images/logo-vet2.svg"
+          alt="Animal Wellness Center"
+          class="h-10 object-contain"
+        />
+        <img
+          src="/images/logo-vet3.svg"
+          alt="Veterinary Specialists"
+          class="h-14 object-contain"
+        />
+        <img
+          src="/images/logo-vet4.svg"
+          alt="Pet Health Clinic"
+          class="h-9 object-contain"
+        />
+        <img
+          src="/images/logo-vet5.svg"
+          alt="City Vet Hospital"
+          class="h-12 object-contain"
+        />
+      </div>
+    </div>
+  </div>
+</section>

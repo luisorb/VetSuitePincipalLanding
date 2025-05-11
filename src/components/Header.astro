@@ -1,0 +1,54 @@
+---
+// src/components/Header.astro
+---
+
+<header class="bg-white shadow-sm">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center">
+      <i class="fas fa-paw text-blue-600 text-2xl mr-2"></i>
+      <span class="text-xl font-bold text-gray-800">VetSuite</span>
+    </div>
+    <nav class="hidden md:block">
+      <ul class="flex space-x-8">
+        <li>
+          <a
+            href="#features"
+            class="hover:text-blue-600 transition duration-300">Funciones</a
+          >
+        </li>
+        <li>
+          <a href="#pricing" class="hover:text-blue-600 transition duration-300"
+            >Precios</a
+          >
+        </li>
+        <li>
+          <a
+            href="#testimonials"
+            class="hover:text-blue-600 transition duration-300">Testimonios</a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-blue-600 transition duration-300"
+            >Contacto</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="flex items-center space-x-4">
+      <a
+        href="/login"
+        class="hidden md:block hover:text-blue-600 transition duration-300"
+        >Iniciar sesión</a
+      >
+      <a
+        href="/register"
+        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300"
+      >
+        Registrarse
+      </a>
+      <button class="md:hidden text-gray-600">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,11 +1,49 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// src/pages/index.astro
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import CTA from "../components/CTA.astro";
+import Footer from "../components/Footer.astro";
+import HeroSection from "../components/HeroSection.astro";
+import LogosSection from "../components/LogosSection.astro";
+import FeaturesSection from "../components/FeaturesSection.astro";
+import HowItsWorks from "../components/HowItsWorks.astro";
+import TestimonialsSection from "../components/TestimonialsSection.astro";
+import PricingSection from "../components/PricingSection.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VetSuite - Gestión Integral para Clínicas Veterinarias</title>
+    <meta
+      name="description"
+      content="Sistema SaaS para la gestión y administración de clínicas veterinarias. Optimiza tus operaciones diarias con nuestra solución todo en uno."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50 font-sans text-gray-800">
+    <Header />
+
+    <HeroSection />
+
+    <LogosSection />
+
+    <FeaturesSection />
+
+    <HowItsWorks />
+
+    <TestimonialsSection />
+
+    <PricingSection />
+
+    <CTA />
+
+    <Footer />
+  </body>
+</html>

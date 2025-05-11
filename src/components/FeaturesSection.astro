@@ -1,0 +1,76 @@
+---
+import FeatureCard from "../components/FeatureCard.astro";
+---
+
+<!-- Modern Features Section -->
+<section
+  id="features"
+  class="py-28 px-4 bg-gradient-to-b from-gray-50 to-white"
+>
+  <div class="max-w-7xl mx-auto">
+    <div class="max-w-3xl mx-auto text-center mb-20">
+      <span class="inline-block mb-4 text-blue-600 font-semibold tracking-wider"
+        >FUNCIONALIDADES INTEGRALES</span
+      >
+      <h2
+        class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight"
+      >
+        Potencia tu clínica veterinaria <br class="hidden md:block" /> con herramientas
+        especializadas
+      </h2>
+      <p class="text-xl text-gray-600 md:px-10">
+        Un ecosistema completo diseñado por veterinarios para veterinarios,
+        optimizando cada aspecto de tu práctica diaria.
+      </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <FeatureCard
+        icon="users"
+        title="Gestión de Clientes"
+        description="Sistema centralizado con perfiles completos de clientes y mascotas, historial de visitas y preferencias."
+        highlightColor="blue"
+      />
+      <FeatureCard
+        icon="calendar-check"
+        title="Agenda Inteligente"
+        description="Programación automática con recordatorios, bloqueo de horarios y visualización por especialista."
+        highlightColor="emerald"
+      />
+      <FeatureCard
+        icon="paw"
+        title="Historial Clínico"
+        description="Registros médicos detallados con plantillas personalizables y seguimiento de tratamientos."
+        highlightColor="indigo"
+      />
+      <FeatureCard
+        icon="pills"
+        title="Gestión de Farmacia"
+        description="Control de inventario en tiempo real con alertas de caducidad y automatización de pedidos."
+        highlightColor="amber"
+      />
+      <FeatureCard
+        icon="chart-line"
+        title="Business Intelligence"
+        description="Dashboard ejecutivo con KPIs clave, tendencias y reportes financieros automatizados."
+        highlightColor="purple"
+      />
+      <FeatureCard
+        icon="user-md"
+        title="Workflow Colaborativo"
+        description="Roles personalizados con permisos granulares y sistema de tareas integrado."
+        highlightColor="rose"
+      />
+    </div>
+
+    <div class="mt-20 text-center">
+      <a
+        href="#pricing"
+        class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+      >
+        <span>Ver planes completos</span>
+        <i class="fas fa-arrow-right ml-3"></i>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+---
+interface Props {
+  name: string;
+  position: string;
+  quote: string;
+  stars: number;
+  image?: string;
+  featured?: boolean;
+}
+
+const { name, position, quote, stars, image, featured = false } = Astro.props;
+---
+
+<div
+  class={`relative h-full p-1 rounded-2xl group ${featured ? "bg-gradient-to-r from-blue-300 to-blue-200" : "bg-gray-100"}`}
+>
+  <div
+    class="h-full bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+  >
+    <div class="flex items-start mb-8">
+      {
+        image && (
+          <img
+            src={image}
+            alt={name}
+            class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md mr-6"
+          />
+        )
+      }
+      <div>
+        <div class="flex mb-2">
+          {
+            [...Array(stars)].map(() => (
+              <i class="fas fa-star text-amber-400 mr-1" />
+            ))
+          }
+        </div>
+        <h3 class="text-xl font-bold text-gray-900">{name}</h3>
+        <p class="text-gray-500 text-sm">{position}</p>
+      </div>
+    </div>
+
+    <blockquote class="relative pl-6">
+      <div
+        class="absolute left-0 top-0 text-5xl text-gray-100 font-serif leading-none h-6"
+      >
+        “
+      </div>
+      <p class="text-gray-600 italic relative z-10 pl-4">{quote}</p>
+    </blockquote>
+
+    {
+      featured && (
+        <div class="absolute -top-3 -right-3 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+          <i class="fas fa-medal mr-1" /> Destacado
+        </div>
+      )
+    }
+  </div>
+</div>
