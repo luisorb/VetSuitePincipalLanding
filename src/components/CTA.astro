@@ -2,20 +2,67 @@
 // src/components/CTA.astro
 ---
 
-<section class="py-20 px-4 bg-blue-600 text-white">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">
-      ¿Listo para transformar tu clínica veterinaria?
-    </h2>
-    <p class="text-xl mb-8 opacity-90">
-      Regístrate hoy y obtén 14 días gratis para probar todas las funciones sin
-      compromiso.
-    </p>
-    <a
-      href="/register"
-      class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300"
-    >
-      Comenzar prueba gratuita
-    </a>
+<section
+  class="relative py-28 px-4 bg-gradient-to-r from-blue-600 to-blue-500 overflow-hidden"
+>
+  <!-- Elementos decorativos -->
+  <div class="absolute top-0 left-0 w-full h-full opacity-10">
+    <div class="absolute top-20 -left-20 w-64 h-64 rounded-full bg-white"></div>
+    <div class="absolute bottom-10 -right-10 w-80 h-80 rounded-full bg-white">
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2
+        class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-50"
+      >
+        Revoluciona la gestión de tu <span class="text-white"
+          >clínica veterinaria</span
+        >
+      </h2>
+      <p
+        class="text-xl text-gray-50 md:text-2xl mb-10 opacity-95 leading-relaxed"
+      >
+        Únete a más de 1,200 veterinarios que ya optimizan sus operaciones con
+        nuestra plataforma. Prueba todas las funciones <strong
+          >14 días gratis</strong
+        >, sin tarjeta requerida.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a
+          href="/register"
+          class="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-50 font-semibold py-4 px-10 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+        >
+          <i class="fas fa-play-circle mr-3 text-lg"></i>
+          Comenzar prueba gratuita
+        </a>
+        <a
+          href="#demo"
+          class="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:bg-opacity-10 font-semibold py-4 px-10 rounded-lg transition-all duration-300"
+        >
+          <i class="fas fa-video mr-3 text-lg"></i>
+          Ver demostración
+        </a>
+      </div>
+
+      <div
+        class="mt-10 flex items-center justify-center space-x-4 text-sm text-blue-100"
+      >
+        <div class="flex items-center">
+          <i class="fas fa-check-circle mr-2"></i>
+          Sin compromiso
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-check-circle mr-2"></i>
+          Soporte 24/7
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-check-circle mr-2"></i>
+          Cancelación fácil
+        </div>
+      </div>
+    </div>
   </div>
 </section>
