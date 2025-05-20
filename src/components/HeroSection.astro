@@ -1,6 +1,10 @@
-<!-- Hero Section -->
+---
+// No necesitas imports si es Astro puro
+---
+
 <section class="py-20 px-4 md:px-8 max-w-6xl mx-auto">
   <div class="flex flex-col md:flex-row items-center gap-12">
+    <!-- Texto -->
     <div class="md:w-1/2">
       <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
         Simplifica la gestión de tu veterinaria con nuestra solución SaaS
@@ -24,12 +28,55 @@
         </a>
       </div>
     </div>
-    <div class="md:w-1/2">
-      <img
-        src="/images/hero-vet.png"
-        alt="Dashboard VetSuite"
-        class="rounded-xl shadow-xl border border-gray-200"
-      />
+
+    <!-- Carrusel -->
+    <div
+      class="md:w-1/2 relative aspect-video rounded-xl overflow-hidden shadow-xl border border-gray-200"
+    >
+      <div class="relative w-full h-full" id="image-carousel">
+        <img
+          src="/images/hero-vet1.webp"
+          alt="Vista 1"
+          class="carousel-image absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] opacity-100 z-20"
+        />
+        <img
+          src="/images/hero-vet2.webp"
+          alt="Vista 2"
+          class="carousel-image absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] opacity-0 z-10"
+        />
+        <img
+          src="/images/hero-vet3.webp"
+          alt="Vista 3"
+          class="carousel-image absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] opacity-0 z-10"
+        />
+        <img
+          src="/images/hero-vet4.webp"
+          alt="Vista 3"
+          class="carousel-image absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] opacity-0 z-10"
+        />
+        <img
+          src="/images/hero-vet5.webp"
+          alt="Vista 3"
+          class="carousel-image absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms] opacity-0 z-10"
+        />
+      </div>
     </div>
   </div>
+
+  <!-- JavaScript nativo para rotar imágenes -->
+  <script>
+    const images = document.querySelectorAll(".carousel-image");
+    let current = 0;
+
+    setInterval(() => {
+      const previous = current;
+      current = (current + 1) % images.length;
+
+      images[previous].classList.remove("opacity-100", "z-20");
+      images[previous].classList.add("opacity-0", "z-10");
+
+      images[current].classList.remove("opacity-0", "z-10");
+      images[current].classList.add("opacity-100", "z-20");
+    }, 4000);
+  </script>
 </section>

@@ -2,29 +2,30 @@
 import FeatureCard from "../components/FeatureCard.astro";
 ---
 
-<!-- Modern Features Section -->
 <section
   id="features"
-  class="py-28 px-4 bg-gradient-to-b from-gray-50 to-white"
+  class="relative py-32 px-6 bg-gradient-to-b from-white via-slate-50 to-slate-100"
 >
   <div class="max-w-7xl mx-auto">
-    <div class="max-w-3xl mx-auto text-center mb-20">
-      <span class="inline-block mb-4 text-blue-600 font-semibold tracking-wider"
-        >FUNCIONALIDADES INTEGRALES</span
+    <div class="max-w-3xl mx-auto text-center mb-24">
+      <span
+        class="inline-block mb-3 text-blue-600 font-medium uppercase tracking-widest"
       >
+        Funcionalidades Integrales
+      </span>
       <h2
-        class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight"
+        class="text-4xl md:text-5xl font-bold text-gray-900 leading-snug tracking-tight"
       >
-        Potencia tu clínica veterinaria <br class="hidden md:block" /> con herramientas
-        especializadas
+        Potencia tu clínica veterinaria <br class="hidden md:block" />
+        con herramientas especializadas
       </h2>
-      <p class="text-xl text-gray-600 md:px-10">
+      <p class="mt-6 text-lg md:text-xl text-gray-600 md:px-8">
         Un ecosistema completo diseñado por veterinarios para veterinarios,
         optimizando cada aspecto de tu práctica diaria.
       </p>
     </div>
 
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 px-2">
       <FeatureCard
         icon="users"
         title="Gestión de Clientes"
@@ -63,14 +64,20 @@ import FeatureCard from "../components/FeatureCard.astro";
       />
     </div>
 
-    <div class="mt-20 text-center">
+    <div class="mt-24 text-center">
       <a
         href="#pricing"
-        class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+        class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white text-lg font-semibold shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
       >
-        <span>Ver planes completos</span>
-        <i class="fas fa-arrow-right ml-3"></i>
+        Ver planes completos
+        <i class="fas fa-arrow-right"></i>
       </a>
     </div>
+  </div>
+
+  <!-- Decorativo opcional -->
+  <div
+    class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-blue-500 via-emerald-500 to-purple-500 opacity-30 blur-lg pointer-events-none"
+  >
   </div>
 </section>
